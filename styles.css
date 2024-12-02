@@ -1,0 +1,405 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2874f0;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+    width: 400px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #2874f0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.profile img {
+    height: 40px; /* Set the height of the profile image */
+    width: 40px; /* Set the width of the profile image */
+    border-radius: 50%; /* Makes the image circular */
+    display: inline-block; /* Ensures the image stays inline */
+    vertical-align: middle; /* Aligns with text or buttons */
+}
+
+.user-actions {
+    display: flex; /* Flexbox layout for proper alignment */
+    align-items: center; /* Vertically align items */
+    gap: 10px; /* Add spacing between the profile image and button */
+}
+
+.user-actions button {
+    padding: 8px 20px; /* Add padding inside the button */
+    margin-left: 10px; /* Left margin for spacing */
+    background-color: #fff; /* Button background color */
+    color: #2874f0; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 14px; /* Set font size for text */
+}
+
+.user-actions button:hover {
+    background-color: #f0f0f0; /* Add a hover effect for better UX */
+}
+
+/* Navigation */
+.nav-section {
+    display: flex;
+    justify-content: space-around; /* Space between items */
+    align-items: center;
+    background-color: #2874f0; /* Flipkart blue */
+    padding: 15px 0;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.nav-item {
+    text-align: center;
+    color: white;
+    width: 120px; /* Adjust width for each item */
+    margin: 10px 0; /* Space between rows if wrapped */
+}
+
+.nav-item img {
+    width: 60px; /* Icon size */
+    height: 60px;
+    border-radius: 50%; /* Optional: Circular icons */
+    margin-bottom: 5px;
+}
+
+.nav-item p {
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    background-color: #1e5bb5; /* Darker blue on hover */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-section {
+        flex-wrap: wrap; /* Wrap items for smaller screens */
+    }
+    .nav-item {
+        width: 100px; /* Adjust width for smaller screens */
+    }
+}
+
+
+.carousel-slide {
+  margin: 50px 0;           /* Adds vertical spacing */
+  text-align: center;       /* Centers the text, if needed */
+}
+
+.carousel-slide h2 {
+  margin: 20px 0;           /* Adds gap above and below the heading */
+  font-size: 2rem;          /* Adjust the font size */
+  color: #333;              /* Customize color */
+}
+
+.image-container {
+  display: flex;            /* Enables flexbox layout */
+  justify-content: space-around; /* Spreads images evenly */
+  align-items: center;      /* Vertically centers the images */
+  width: 100%;              /* Takes full width of the screen */
+  gap: 20px;                /* Adds space between images */
+  flex-wrap: nowrap;        /* Ensures all images stay in a row */
+  padding: 20px;            /* Adds padding around the images */
+  overflow-x: hidden;       /* Prevents horizontal scrolling unless needed */
+  box-sizing: border-box;   /* Includes padding in width calculations */
+}
+
+.image-container img {
+  flex: 1;                  /* Ensures images share space evenly */
+  max-width: 20%;           /* Limits max width to fit 4 images horizontally */
+  height: auto;             /* Maintains aspect ratio */
+  border-radius: 10px;      /* Adds rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the images */
+.image-container img:hover {
+  transform: scale(1.1);    /* Enlarges image on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+  cursor: pointer;          /* Changes cursor to pointer */
+}
+
+
+
+/* Ads Section */
+.ads-section {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.ads-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.ads-container img {
+    width: 48%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Shop by Category Section */
+.shop-by-category {
+    padding: 40px;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shop-by-category h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Category Grid */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Category Card */
+.category-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.category-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.category-card p {
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Hover Animation for Category */
+.category-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-card:hover img {
+    transform: scale(1.2);
+}
+
+/* Add subtle fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+/* Footer */
+footer {
+    background-color: #2874f0;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Interactive Ad hover effect */
+.ads-container img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.ads-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Animation (hidden by default) */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: rgba(40, 116, 240, 0.5);
+    border: 2px solid rgba(40, 116, 240, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+ /* About Section */
+        .about {
+            background-color: #f4f4f4;
+            padding: 40px;
+            text-align: left;
+            animation: fadeInLeft 1.5s ease-in-out;
+        }
+
+        .about h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .about ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        width: 80%; /* Adjust input width */
+        margin-bottom: 10px;
+    }
+
+    .nav-item {
+        width: 80px; /* Narrower navigation items */
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .category-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* More compact layout */
+    }
+
+    .ads-container img {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Enhanced focus styles for keyboard users */
+button:focus, 
+input:focus, 
+.nav-item:focus {
+    outline: 3px solid #ffbf00; /* Bright yellow outline for contrast */
+    outline-offset: 3px; /* Space between element and outline */
+}
+
+/* Accessible color contrast for better readability */
+body {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+}
+
+/* Preload fonts for faster rendering */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('custom-font.woff2') format('woff2');
+    font-display: swap; /* Ensure text is displayed while font loads */
+}
+
+/* Lazy loading for images */
+img {
+    loading: lazy;
+}
+
+/* Button hover enhancement */
+button:hover {
+    background-color: #ffbf00; /* Gold-like color */
+    color: #000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Elevated hover effect */
+}
+
